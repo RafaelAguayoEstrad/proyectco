@@ -1,0 +1,169 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+header {
+    background-color: #000000;
+    color: #000000;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fffbfb;
+}
+
+.carousel-container {
+    display: flex;
+    animation: slide 10s infinite;
+}
+
+.carousel img {
+    width: 100%;
+    height: 500px;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-33.33%); }
+    45% { transform: translateX(-33.33%); }
+    50% { transform: translateX(-66.66%); }
+    70% { transform: translateX(-66.66%); }
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    background-color: #320202;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #000;
+}
+
+section {
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+section h2 {
+    color: #000;
+    font-size: 28px;
+}
+
+section p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section a:hover {
+    text-decoration: underline;
+}
+
+.highlights {
+    background-color: #f9f9f9;
+}
+
+.star {
+    background-color: #fafafa;
+}
+
+.container img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.model-info, .moment-info {
+    margin-left: 20px;
+}
+
+.model-info h3, .moment-info h3 {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.model-info p, .moment-info p {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+}

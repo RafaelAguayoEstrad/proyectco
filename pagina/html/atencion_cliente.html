@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes-Benz - Atención a Clientes</title>
+    <link rel="stylesheet" href="/pagina/css/atencion_clientes.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="/pagina/imagenes/logo_pagina.jpg" alt="Mercedes-Benz Logo">
+                    <nav>
+                        <ul class="nav-links">
+                            <li><a href="/pagina/html/index.html">Inicio</a></li>
+                            <li><a href="/pagina/html/productos.html">Vehículos Exclusivos</a></li>
+                            <li><a href="/pagina/html/historia.html">Historia de Mercedes-benz</a></li>
+                            <li><a href="/pagina/html/login.html">Cerrar session</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h1>Atención a Clientes</h1>
+            <form action="/pagina/php/guardar_comentario.php" method="POST" id="commentForm">
+                <label for="comentario">Escribe tu comentario:</label><br>
+                <textarea id="comentario" name="comentario" rows="4" required></textarea><br><br>
+                <input type="submit" value="Enviar Comentario">
+            </form>
+        </div>
+    </main>
+
+    <script src="/pagina/script/obtener_usuario.js"></script>
+</body>
+</html>

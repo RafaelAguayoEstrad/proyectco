@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes-Benz - Historia y Modelos</title>
+    <link rel="stylesheet" href="/pagina/css/historia.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/pagina/imagenes/logo_pagina.jpg" alt="Mercedes-Benz Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="/pagina/html/index.html">Inicio</a></li>
+                <li><a href="/pagina/html/historia.html">Historia de Mercedes-Benz</a></li>
+                <li><a href="/pagina/html/atencion_cliente.html">Atención a Clientes</a></li>
+                <li><a href="/pagina/html/carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="products" id="product">
+        <div class="product" style="display: flex; flex-direction: row;">
+            <div class="product-image" style="order: 2;">
+                <img src="/pagina/imagenes/carro1.jpg" alt="G63 AMG">
+            </div>
+            <div class="product-details" style="order: 1; text-align: left;">
+                <h2>G63 AMG</h2>
+                <p><strong>Descripción:</strong></p>
+                <ul style="text-align: left;">
+                    <li>Motor: V8 biturbo de 4.0 litros.</li>
+                    <li>Potencia: Aproximadamente 577 caballos de fuerza.</li>
+                    <li>Aceleración: De 0 a 100 km/h en aproximadamente 4.5 segundos.</li>
+                    <li>Transmisión: Automática de 9 velocidades.</li>
+                    <li>Tracción: Tracción en las cuatro ruedas (AWD).</li>
+                    <li>Blindaje: Nivel de protección B6/B7, capaz de resistir ataques con armas de fuego y explosivos.</li>
+                    <li>Interior: Lujoso y espacioso, con materiales de alta calidad, tecnología avanzada y características de confort premium.</li>
+                    <li>Extras: Equipado con sistemas de seguridad adicionales como neumáticos run-flat, vidrios antibalas y sistemas de comunicación de emergencia.</li>
+                </ul>
+                <br><br>
+                <p><strong>Precio 70,000 USA</strong></p>
+                <form action="/pagina/php/procesar_pagophp" method="POST">
+                    <input type="hidden" name="nombre" value="G63 AMG">
+                    <input type="hidden" name="precio" value="70000">
+                    <button type="submit">Agregar al Carrito</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <br><br><br><br>
+
+    <section class="products" id="product">
+        <div class="product" style="display: flex; flex-direction: row;">
+            <div class="product-image" style="order: 2;">
+                <img src="/pagina/imagenes/carro2.jpg" alt="AMG GT">
+            </div>
+            <div class="product-details" style="order: 1; text-align: left;">
+                <h2>AMG GT</h2>
+                <p><strong>Descripción:</strong></p>
+                <ul style="text-align: left;">
+                    <li>Motor: V8 biturbo de 4.0 litros.</li>
+                    <li>Potencia: Aproximadamente 577 caballos de fuerza.</li>
+                    <li>Aceleración: De 0 a 100 km/h en aproximadamente 4.5 segundos.</li>
+                    <li>Transmisión: Automática de 9 velocidades.</li>
+                    <li>Tracción: Tracción en las cuatro ruedas (AWD).</li>
+                    <li>Blindaje: Nivel de protección B6/B7, capaz de resistir ataques con armas de fuego y explosivos.</li>
+                    <li>Interior: Lujoso y espacioso, con materiales de alta calidad, tecnología avanzada y características de confort premium.</li>
+                    <li>Extras: Equipado con sistemas de seguridad adicionales como neumáticos run-flat, vidrios antibalas y sistemas de comunicación de emergencia.</li>
+                </ul>
+                <br><br>
+                <p><strong>Precio 50,000 USA</strong></p>
+                <form action="/pagina/html/carrito.html" method="POST">
+                    <input type="hidden" name="nombre" value="AMG GT">
+                    <input type="hidden" name="precio" value="50000">
+                    <button type="submit">Agregar al Carrito</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="/pagina/script/obtener_usuario.js"></script>
+</body>
+</html>
+
+

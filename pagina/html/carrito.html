@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="/pagina/css/historia.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/pagina/imagenes/logo_pagina.jpg" alt="Mercedes-Benz Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="/pagina/html/index.html">Inicio</a></li>
+                <li><a href="/pagina/html/historia.html">Historia de Mercedes-Benz</a></li>
+                <li><a href="/pagina/html/atencion_cliente.html">Atención a Clientes</a></li>
+                <li><a href="/pagina/html/carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="cart">
+        <h1>Carrito de Compras</h1>
+        <form action="/pagina/php/procesar_pago.php" method="POST">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    session_start();
+                    if (!isset($_SESSION['carrito']) || empty($_SESSION['carrito'])) {
+                        echo "<tr><td colspan='2'>El carrito está vacío.</td></tr>";
+                    } else {
+                        $total = 0;
+                        foreach ($_SESSION['carrito'] as $item) {
+                            echo '<tr>
+                                    <td>' . htmlspecialchars($item['nombre']) . '</td>
+                                    <td>$' . htmlspecialchars($item['precio']) . '</td>
+                                  </tr>';
+                            $total += $item['precio'];
+                        }
+                        echo '<tr>
+                                <td><strong>Total</strong></td>
+                                <td><strong>$' . $total . '</strong></td>
+                              </tr>';
+                    }
+                    ?>
+                </tbody>
+            </table>
+            <h2>Información de Pago</h2>
+            <label>Dirección:</label>
+            <input type="text" name="direccion" required>
+            <label>Nombre:</label>
+            <input type="text" name="nombre" required>
+            <label>Apellido Paterno:</label>
+            <input type="text" name="apellido_paterno" required>
+            <label>Apellido Materno:</label>
+            <input type="text" name="apellido_materno" required>
+            <label>Usuario:</label>
+            <input type="text" name="usuario" required>
+            <label>Teléfono:</label>
+            <input type="text" name="telefono" required>
+            <label>Correo Electrónico:</label>
+            <input type="email" name="correo_electronico" required>
+            <label>Metodo de Pago:</label>
+            <select name="metodo_pago" required>
+                <option value="Efectivo">Efectivo</option>
+                <option value="Tarjeta">Tarjeta</option>
+            </select>
+            <button type="submit">Procesar Pago</button>
+        </form>
+        <script>
+            if (window.location.search.includes('success=true')) {
+                Swal.fire({
+                    icon: 'success',
+                    title: '¡Compra exitosa!',
+                    text: 'Tu pago se ha realizado correctamente.',
+                });
+            }
+        </script>
+    </section>
+</body>
+</html>

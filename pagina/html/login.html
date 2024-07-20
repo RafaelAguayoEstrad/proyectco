@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Acceso</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/pagina/css/login.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+    
+        function mostrarAlerta(mensaje) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error de inicio de sesión',
+                text: mensaje,
+                confirmButtonText: 'OK'
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="contenedor">
+        <div id="contenedorcentrado">
+            <div id="login">
+                <form id="loginform" method="POST" action="/pagina/php/login.php">
+                    <a for="usuario">Usuario</a>
+                    <input id="usuario" type="text" name="usuario" placeholder="Usuario" required>
+                    
+                    <a for="password">Contraseña</a>
+                    <input id="password" type="password" placeholder="Contraseña" name="password" required>
+                    
+                    <button type="submit" title="Ingresar" name="Ingresar">Login</button>
+                </form>
+            </div>
+            <div id="derecho">
+                <div class="titulo">
+                   <a>Bienvenido</a> 
+                </div>
+                <hr>
+                <div class="pie-form">
+                    <a href="registro.html">¿No tienes Cuenta? Regístrate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
